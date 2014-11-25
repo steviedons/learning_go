@@ -16,3 +16,10 @@
 # User specific aliases and function
 alias tsess="tmux list-sessions"
 alias tatt="tmux attach -t"
+# Ubuntu aliases
+alias distup="sudo apt-get update && sudo apt-get dist-upgrade"
+alias up="sudo apt-get update && sudo apt-get upgrade"
+# movement aliases
+alias ..="cd .."
+alias ...="cd ../.."
+
