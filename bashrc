@@ -1,54 +1,45 @@
-# .bashrc
+#!/usr/bin/env bash
 
-# Source global definitions
- if [ -f /etc/bashrc ]; then
- 	. /etc/bashrc
- 	fi
+# Load RVM, if you are using it
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+# Add rvm gems and nginx to the path
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 
- 	function _update_ps1() {
-    export PS1="\[$(tput bold)\]\[$(tput setaf 6)\]\t [load: `cat /proc/loadavg | awk '{ print $1; }'`]\[$(tput setaf 2)\][\[$(tput setaf 3)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 7)\]\h (`head -1 /etc/issue | awk '{print $1}'`)\[$(tput setaf 6)\]\W\[$(tput setaf 2)\]]\[$(tput setaf 4)\]\\$ \[$(tput sgr0)\]"
- 		    }
-    	export PROMPT_COMMAND="_update_ps1"
-#
-# User specific aliases and function
-alias tsess="tmux list-sessions"
-alias tatt="tmux attach -t"
-# Ubuntu aliases
-alias distup="sudo apt-get update && sudo apt-get dist-upgrade"
-alias up="sudo apt-get update && sudo apt-get upgrade"
-# movement aliases
-alias ..="cd .."
-alias ...="cd ../.."
-# User specific environment and startup programs
-# Setting up the ssh-agent to start when the shell starts
-SSH_ENV="$HOME/.ssh/environment"
+# Path to the bash it configuration
+export BASH_IT=$HOME/.bash_it
 
-function start_agent {
-     echo "Initialising new SSH agent..."
-     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-     echo succeeded
-     chmod 600 "${SSH_ENV}"
-     . "${SSH_ENV}" > /dev/null
-     /usr/bin/ssh-add;
-}
+# Lock and Load a custom theme file
+# location /.bash_it/themes/
+export BASH_IT_THEME='bobby'
 
-# Source SSH settings, if applicable
+# Your place for hosting Git repos. I use this for private repos.
+export GIT_HOSTING='git@git.domain.com'
 
-if [ -f "${SSH_ENV}" ]; then
-     . "${SSH_ENV}" > /dev/null
-     #ps ${SSH_AGENT_PID} doesn't work under cywgin
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-         start_agent;
-     }
-else
-     start_agent;
-fi
+# Set my editor and git editor
+export EDITOR="/usr/bin/mate -w"
+export GIT_EDITOR='/usr/bin/mate -w'
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
+# Set the path nginx
+export NGINX_PATH='/opt/nginx'
 
-export PATH
-export VISUAL=vim
+# Don't check mail when opening terminal.
+unset MAILCHECK
 
+
+# Change this to your console based IRC client of choice.
+
+export IRC_CLIENT='irssi'
+
+# Set this to the command you use for todo.txt-cli
+export TODO="t"
+
+# Set this to false to turn off version control status checking within the prompt for all themes
+export SCM_CHECK=true
+
+# Set vcprompt executable path for scm advance info in prompt (demula theme)
+# https://github.com/xvzf/vcprompt
+#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
