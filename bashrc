@@ -43,3 +43,6 @@ export SCM_CHECK=true
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+# load bash motd
+source ~/.bash_files/bash_init.sh
+

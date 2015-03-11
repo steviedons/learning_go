@@ -33,3 +33,6 @@ done
 echo "Copy bash_it directory into home"
 cp -r .bash_it ~/.bash_it
 
+echo "Copy bash_files directory into home"
+cp -r .bash_files ~/.bash_files
+
