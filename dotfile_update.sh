@@ -29,3 +29,7 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "Copy bash_it directory into home"
+cp -r .bash_it ~/.bash_it
+
