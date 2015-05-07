@@ -36,3 +36,5 @@ cp -r .bash_it ~/.bash_it
 echo "Copy bash_files directory into home"
 cp -r .bash_files ~/.bash_files
 
+echo "Copy screenfetch to the /usr/local/bin directory"
+sudo cp screenFetch/screenfetch-dev /usr/local/bin/.
