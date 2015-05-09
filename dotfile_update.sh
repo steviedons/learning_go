@@ -37,4 +37,5 @@ echo "Copy bash_files directory into home"
 cp -r .bash_files ~/.bash_files
 
 echo "Copy screenfetch to the /usr/local/bin directory"
-sudo cp screenFetch/screenfetch-dev /usr/local/bin/.
+#Commented out the screenfetch as it fails on aws setup
+#sudo cp screenFetch/screenfetch-dev /usr/local/bin/.
