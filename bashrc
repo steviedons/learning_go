@@ -46,4 +46,4 @@ source $BASH_IT/bash_it.sh
 # load bash motd
 #source ~/.bash_files/bash_init.sh
 #Using alsi to print out node details as bash splash screen
-/usr/local/bin/screenfetch-dev
+/usr/bin/screenfetch
