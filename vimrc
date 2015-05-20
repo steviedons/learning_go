@@ -23,5 +23,5 @@ set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 
-# To deal with the issue of opening up a file that you cannot save as its owned by root
+" To deal with the issue of opening up a file that you cannot save as its owned by root
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
