@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim tmux.conf tmux bash_profile"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim tmux.conf tmux bash_profile bash_it bash_files"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -30,12 +30,3 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-echo "Copy bash_it directory into home"
-cp -r .bash_it ~/.bash_it
-
-echo "Copy bash_files directory into home"
-cp -r .bash_files ~/.bash_files
-
-echo "Copy screenfetch to the /usr/local/bin directory"
-#Commented out the screenfetch as it fails on aws setup
-#sudo cp screenFetch/screenfetch-dev /usr/local/bin/.
