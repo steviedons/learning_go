@@ -47,3 +47,6 @@ source $BASH_IT/bash_it.sh
 #source ~/.bash_files/bash_init.sh
 #Using alsi to print out node details as bash splash screen
 /usr/bin/screenfetch
+
+#Arch Aliases
+alias syu=yaourt -Syu --noconfirm
