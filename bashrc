@@ -49,4 +49,4 @@ source $BASH_IT/bash_it.sh
 /usr/bin/screenfetch
 
 #Arch Aliases
-alias syu=yaourt -Syu --noconfirm
+alias syu="yaourt -Syu --noconfirm"
