@@ -50,3 +50,5 @@ source $BASH_IT/bash_it.sh
 
 #Arch Aliases
 alias syu="yaourt -Syu --noconfirm"
+#Git Aliases
+alias gwhat="git whatchanged -p -n 1"
