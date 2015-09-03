@@ -17,8 +17,8 @@ export BASH_IT_THEME='bobby'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="vim"
-export GIT_EDITOR='vim'
+export EDITOR="/usr/bin/mate -w"
+export GIT_EDITOR='/usr/bin/mate -w'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
@@ -43,12 +43,3 @@ export SCM_CHECK=true
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
-# load bash motd
-#source ~/.bash_files/bash_init.sh
-#Using alsi to print out node details as bash splash screen
-/usr/bin/screenfetch
-
-#Arch Aliases
-alias syu="yaourt -Syu --noconfirm"
-#Git Aliases
-alias gwhat="git whatchanged -p -n 1"
