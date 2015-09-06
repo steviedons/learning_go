@@ -46,7 +46,7 @@ source $BASH_IT/bash_it.sh
 # load bash motd
 #source ~/.bash_files/bash_init.sh
 #Using alsi to print out node details as bash splash screen
-/usr/bin/screenfetch
+~/dotfiles/screenFetch/screenfetch-dev
 
 #Arch Aliases
 alias syu="yaourt -Syu --noconfirm"

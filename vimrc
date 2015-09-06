@@ -25,3 +25,4 @@ set nowrap                " don't wrap text
 
 " To deal with the issue of opening up a file that you cannot save as its owned by root
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+map <C-n> :NERDTreeToggle<CR>
