@@ -1,0 +1,3 @@
+[submodule "lib/screenFetch"]
+	path = lib/screenFetch
+	url = https://github.com/KittyKatt/screenFetch.git
