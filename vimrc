@@ -27,29 +27,29 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 map <C-n> :NERDTreeToggle<CR>
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle
 " instead of Plugin)
-Plugin 'tmhedberg/SimpylFold'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'tmhedberg/SimpylFold'
+" Bundle 'Valloric/YouCompleteMe'
+" Plugin 'vim-scripts/indentpython.vim'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'nvie/vim-flake8'
+" Plugin 'jnurmine/Zenburn'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'scrooloose/nerdtree'
 
 " all of your Plugins must be added before the following line
-call vundle#end()            " required
+" call vundle#end()            " required
 filetype plugin indent on    " required
 
 "split navigations
@@ -77,11 +77,11 @@ syntax on
 "  colorscheme Zenburn
 "endif
 
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 "nerdtree setup
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+"let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+"map <C-n> :NERDTreeToggle<CR>
+"let g:NERDTreeDirArrows = 1
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
