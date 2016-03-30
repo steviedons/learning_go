@@ -1,3 +1,6 @@
 [submodule "lib/screenFetch"]
 	path = lib/screenFetch
 	url = https://github.com/KittyKatt/screenFetch.git
+[submodule "bash-it"]
+	path = bash-it
+	url = https://github.com/Bash-it/bash-it.git

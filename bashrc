@@ -11,7 +11,7 @@ export BASH_IT=$HOME/.bash_it
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='envy'
+export BASH_IT_THEME='bobby'
 
 # Your place for hosting Git repos. I use this for private repos.
 export GIT_HOSTING='git@git.domain.com'
@@ -43,11 +43,3 @@ export SCM_CHECK=true
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
-# load bash motd
-# Run screenfetch to create a MOTD, screenfetch is a submodule in the git repo
-~/dotfiles/lib/screenFetch/screenfetch-dev
-
-#Arch Aliases
-alias syu="yaourt -Syu --noconfirm"
-#Git Aliases
-alias gwhat="git whatchanged -p -n 1"
