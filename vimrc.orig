@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 execute pathogen#infect()
 "call pathogen#infect()
 ""set background=dark
@@ -25,6 +26,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_puppet_checkers=['puppetlint']
 "
 "let g:vim_markdown_folding_disabled=1
+=======
 " execute pathogen#infect()
 filetype plugin on
 let g:pydiction_location='/home/steve/.vim/bundle/pydiction/complete-dict'
@@ -112,3 +114,4 @@ syntax on
 "let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
+>>>>>>> 3d9b14829feffc758cc584bbb96d02fd6a4c61cc
