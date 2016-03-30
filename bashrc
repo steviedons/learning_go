@@ -44,9 +44,8 @@ export SCM_CHECK=true
 # Load Bash It
 source $BASH_IT/bash_it.sh
 # load bash motd
-#source ~/.bash_files/bash_init.sh
-#Using alsi to print out node details as bash splash screen
-~/dotfiles/screenFetch/screenfetch-dev
+# Run screenfetch to create a MOTD, screenfetch is a submodule in the git repo
+~/dotfiles/lib/screenFetch/screenfetch-dev
 
 #Arch Aliases
 alias syu="yaourt -Syu --noconfirm"
