@@ -32,3 +32,7 @@ export SCM_CHECK=true
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+# Set the prompt so it deals with virtual env and git
+source ~/.bash_prompt.sh
+
