@@ -11,6 +11,10 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc tmux.conf tmux bash_profile bash-it bash_prompt.sh"    # list of files/folders to symlink in homedir
 
 ##########
+# Make sure that the submodules are loaded before seting up the files.
+echo "Initiating git submodules and updating them"
+git submodule init
+git submodule update
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
