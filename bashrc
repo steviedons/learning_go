@@ -34,5 +34,6 @@ export SCM_CHECK=true
 source $BASH_IT/bash_it.sh
 
 # Set the prompt so it deals with virtual env and git
-source ~/.bash_prompt.sh
-
+#source ~/.bash_prompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/dotfiles/bash-git-prompt/gitprompt.sh
