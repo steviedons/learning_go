@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc tmux.conf bash_profile"    # list of files/folders to symlink in homedir
+files="bashrc tmux.conf bash_profile git-prompt-colors.sh"    # list of files/folders to symlink in homedir
 
 ##########
 # Make sure that the submodules are loaded before seting up the files.
