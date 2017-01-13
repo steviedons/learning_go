@@ -1,5 +1,8 @@
 #source ~/.bash_prompt.sh
 
+## ubuntu update and dist-upgrade alias
+alias up='sudo apt-get update && sudo apt-get dist-upgrade'
+
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
 
