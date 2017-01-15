@@ -1,6 +1,7 @@
 [user]
 	name = Stephen Donovan
 	email = steviedons@gmail.com
+
 [alias]
     co = checkout
     ec = config --global -e
