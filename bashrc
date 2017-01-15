@@ -1,5 +1,8 @@
 #source ~/.bash_prompt.sh
 
+## ubuntu update and dist-upgrade alias
+alias up='sudo apt-get update && sudo apt-get dist-upgrade'
+
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
 
@@ -18,7 +21,7 @@ if [ $? -eq 0 ]; then
 	powerline-daemon -q
 	POWERLINE_BASH_CONTINUATION=1
 	POWERLINE_BASH_SELECT=1
-	. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+	. /usr/share/powerline/bindings/bash/powerline.sh
 else
 	GIT_PROMPT_ONLY_IN_REPO=0
 	GIT_PROMPT_START='\[\033[0;32m\]\u@\h\[\033[0;37m\] $PWD'
