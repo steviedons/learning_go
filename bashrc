@@ -1,5 +1,9 @@
 #source ~/.bash_prompt.sh
 
+# Starting up the ssh agent and adding my key
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
+
 ## ubuntu update and dist-upgrade alias
 alias up='sudo apt-get update && sudo apt-get dist-upgrade'
 
