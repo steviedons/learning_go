@@ -7,3 +7,6 @@
 [submodule "vim/bundle/puppet"]
 	path = vim/bundle/puppet
 	url = git://github.com/voxpupuli/vim-puppet.git
+[submodule "powerline_cofiguration"]
+	path = powerline_cofiguration
+	url = https://github.com/steviedons/powerline_cofiguration.git

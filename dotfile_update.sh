@@ -10,6 +10,13 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 files="bashrc tmux.conf bash_profile git-prompt-colors.sh vim vimrc gitconfig"    # list of files/folders to symlink in homedir
 
+###########################
+# Pip install the powerline-gitstatus package to give git status in the powerline
+# Check pip is installed before trying to install
+if ! type "$pip" > /dev/null; then
+    pip install powerline-gitstatus
+fi
+
 ##########
 # Make sure that the submodules are loaded before seting up the files.
 echo "Initiating git submodules and updating them"
@@ -33,4 +40,9 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# Move the powerline_configuration into ~/.config
+# Not the folder name has a spelling error its cofiguration
+
+cp -r ~/dotfiles/powerline_cofiguration ~/.config/powerline
 
