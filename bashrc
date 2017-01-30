@@ -33,3 +33,23 @@ else
 	GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 	source ~/dotfiles/bash-git-prompt/gitprompt.sh
 fi
+
+# Need to add a check that changes the source depending on Arch or Ubuntu
+# Arch has /etc/arch-release
+# Ubuntu has  cat /etc/lsb-release 
+# DISTRIB_ID=Ubuntu
+if [ -f /etc/arch-release ]; 
+then
+  VIRT_SOURCE="/usr/bin/virtualenvwrapper.sh"
+else
+  VIRT_SOURCE="/usr/local/bin/virtualenvwrapper.sh"
+fi
+
+# Adding configuration to setup virtual envs for python
+if [ `id -u` != '0' ]; then
+  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
+  export WORKON_HOME=$HOME/.virtualenvs       # <-- Where all virtualenvs will be stored
+  source $VIRT_SOURCE
+  export PIP_VIRTUALENV_BASE=$WORKON_HOME
+  export PIP_RESPECT_VIRTUALENV=true
+fi
