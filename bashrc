@@ -42,7 +42,7 @@ if [ -f /etc/arch-release ];
 then
   VIRT_SOURCE="/usr/bin/virtualenvwrapper.sh"
 else
-  VIRT_SOURCE="/usr/local/bin/virtualenvwrapper.sh"
+  VIRT_SOURCE="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
 fi
 
 # Adding configuration to setup virtual envs for python
