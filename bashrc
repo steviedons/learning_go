@@ -56,5 +56,3 @@ if [ `id -u` != '0' ]; then
   export PIP_RESPECT_VIRTUALENV=true
 fi
 
-export AWS_ACCESS_KEY_ID='AKIAJ36SQ35JB7A5EWTA'
-export AWS_SECRET_ACCESS_KEY='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'
