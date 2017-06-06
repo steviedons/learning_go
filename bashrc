@@ -49,7 +49,8 @@ fi
 # Adding configuration to setup virtual envs for python
 if [ `id -u` != '0' ]; then
   export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
-  export WORKON_HOME=$HOME/Sync/.virtualenvs       # <-- Where all virtualenvs will be stored
+  export WORKON_HOME=$HOME/Sync/Envs        # <-- Where all virtualenvs will be stored
+  export PROJECT_HOME=$HOME/Sync/Envs
   source $VIRT_SOURCE
   export PIP_VIRTUALENV_BASE=$WORKON_HOME
   export PIP_RESPECT_VIRTUALENV=true
