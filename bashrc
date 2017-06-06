@@ -9,6 +9,7 @@ alias up='sudo apt-get update && sudo apt-get dist-upgrade'
 
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
+alias atom='atom --force-device-scale-factor=1'
 
 ## Use a long listing format ##
 alias ll='ls -la'
@@ -48,8 +49,11 @@ fi
 # Adding configuration to setup virtual envs for python
 if [ `id -u` != '0' ]; then
   export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
-  export WORKON_HOME=$HOME/.virtualenvs       # <-- Where all virtualenvs will be stored
+  export WORKON_HOME=$HOME/Sync/.virtualenvs       # <-- Where all virtualenvs will be stored
   source $VIRT_SOURCE
   export PIP_VIRTUALENV_BASE=$WORKON_HOME
   export PIP_RESPECT_VIRTUALENV=true
 fi
+
+export AWS_ACCESS_KEY_ID='AKIAJ36SQ35JB7A5EWTA'
+export AWS_SECRET_ACCESS_KEY='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'
