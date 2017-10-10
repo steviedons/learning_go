@@ -6,7 +6,7 @@ ssh-add ~/.ssh/id_rsa
 
 ## ubuntu update and dist-upgrade alias
 alias up='sudo apt-get update && sudo apt-get dist-upgrade'
-
+alias python=python3
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
 alias atom='atom --force-device-scale-factor=1'
