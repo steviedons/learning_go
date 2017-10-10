@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bashrc tmux.conf bash_profile git-prompt-colors.sh vim vimrc gitconfig"    # list of files/folders to symlink in homedir
+files="bashrc tmux.conf bash_profile vimrc gitconfig"    # list of files/folders to symlink in homedir
 
 ###########################
 # Pip install the powerline-gitstatus package to give git status in the powerline
