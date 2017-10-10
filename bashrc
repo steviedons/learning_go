@@ -39,20 +39,23 @@ fi
 # Arch has /etc/arch-release
 # Ubuntu has  cat /etc/lsb-release 
 # DISTRIB_ID=Ubuntu
-if [ -f /etc/arch-release ]; 
-then
-  VIRT_SOURCE="/usr/bin/virtualenvwrapper.sh"
-else
-  VIRT_SOURCE="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-fi
+#if [ -f /etc/arch-release ]; 
+#then
+#  VIRT_SOURCE="/usr/bin/virtualenvwrapper.sh"
+#else
+#  VIRT_SOURCE="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+#fi
 
 # Adding configuration to setup virtual envs for python
-if [ `id -u` != '0' ]; then
-  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
-  export WORKON_HOME=$HOME/Sync/Envs        # <-- Where all virtualenvs will be stored
-  export PROJECT_HOME=$HOME/Sync/Envs
-  source $VIRT_SOURCE
-  export PIP_VIRTUALENV_BASE=$WORKON_HOME
-  export PIP_RESPECT_VIRTUALENV=true
-fi
+#if [ `id -u` != '0' ]; then
+#  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
+#  export WORKON_HOME=$HOME/Sync/Envs        # <-- Where all virtualenvs will be stored
+#  export PROJECT_HOME=$HOME/Sync/Envs
+#  source $VIRT_SOURCE
+#  export PIP_VIRTUALENV_BASE=$WORKON_HOME
+#  export PIP_RESPECT_VIRTUALENV=true
+#fi
 
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/steve/anaconda3/bin:$PATH"
