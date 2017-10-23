@@ -1,4 +1,5 @@
 syntax on
+color dracula
 filetype plugin indent on
 let g:powerline_pycmd = 'py3'
 set laststatus=2
