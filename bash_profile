@@ -31,7 +31,7 @@ else
      start_agent;
 fi
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin:/snap/bin
 export VISUAL=vim
 export GOPATH="/home/steve/go1.9"
 export GOROOT="/usr/local/go/"
