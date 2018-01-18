@@ -46,3 +46,6 @@ done
 
 cp -r ~/dotfiles/powerline_cofiguration ~/.config/powerline
 
+sudo apt-get install python-pip
+pip install powerline-gitstatus
+powerline-daemon --replace
