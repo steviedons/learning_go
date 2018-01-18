@@ -17,3 +17,5 @@
     bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
 [merge]
 	tool = kompare
+[push]
+	default = matching
