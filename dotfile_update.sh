@@ -10,13 +10,6 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 files="bashrc tmux.conf bash_profile vimrc gitconfig"    # list of files/folders to symlink in homedir
 
-###########################
-# Pip install the powerline-gitstatus package to give git status in the powerline
-# Check pip is installed before trying to install
-if ! type "$pip" > /dev/null; then
-    pip install powerline-gitstatus
-fi
-
 ##########
 # Make sure that the submodules are loaded before seting up the files.
 echo "Initiating git submodules and updating them"
@@ -46,6 +39,20 @@ done
 
 cp -r ~/dotfiles/powerline_cofiguration ~/.config/powerline
 
-sudo apt-get install python-pip
-pip install powerline-gitstatus
-powerline-daemon --replace
+
+###########################
+# Check the linux distro, and then ip install the powerline-gitstatus package to give git status in the powerline
+
+DISTRO=$( cat /etc/lsb-release | tr [:upper:] [:lower:] | grep -Poi '(ubuntu|elementary)' | uniq )
+if [ -z $DISTRO ]; then
+    echo "Distro will not configured for powerline"
+else
+# On a Ubuntu machine install pip, git status and then restart powerline-daemon
+    sudo apt-get install python-pip
+    # upgrade pip to get rid of warnings
+    pip install --upgrade pip
+    pip install powerline-gitstatus
+    powerline-daemon --replace
+fi
+
+

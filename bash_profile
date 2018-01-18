@@ -31,7 +31,8 @@ else
      start_agent;
 fi
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/go/bin
 export VISUAL=vim
+export GOPATH="/home/steve/go1.9"
+export GOROOT="/usr/local/go/"
+export GOTOOLDIR="/usr/lib/go-1.6/pkg/tool/linux_amd64"
