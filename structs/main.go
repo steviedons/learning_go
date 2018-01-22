@@ -47,8 +47,13 @@ func main() {
 	//steve.print()
 	// need to use a pointer here to make sure steve is changed
 
-	stevePointer := &steve
-	stevePointer.updateName("Steve")
+	// stevePointer := &steve
+
+	// Turn address into a value with *address
+	// Turn value into an address with &value
+
+	steve.updateName("Steve")
+
 	steve.print()
 
 	tracy.print()
@@ -57,8 +62,11 @@ func main() {
 
 // This code needs to be changed as it does not update the original object as its sent as a new object, need to
 // change it to use pointers
+
+// * infront of types means we are working with a pointer to person
 func (pointerToPerson *person) updateName(newFirstName string) {
-	pointerToPerson.firstName = newFirstName
+	// * infront of the variable is to get to the actual contents of the pointer
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
